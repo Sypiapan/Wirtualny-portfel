@@ -21,6 +21,7 @@ export default function Selects(props) {
 
                 > <MenuItem value={""}>Wybierz</MenuItem>
                     {options.map(item =>(<MenuItem key={item.id} value={item.id}>{item.title}</MenuItem>) )}
+
                 </Select>
 
             </FormControl>

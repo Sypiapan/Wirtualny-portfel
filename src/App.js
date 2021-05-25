@@ -18,7 +18,7 @@ function App() {
 
             {/*<Wallet/>*/}
             <Assets/>
-            <Alarms/>
+            {/*<Alarms/>*/}
 
 
 

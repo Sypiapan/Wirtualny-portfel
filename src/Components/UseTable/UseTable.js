@@ -7,7 +7,7 @@ export default function UseTable(records, headCells) {
     const TblContainer = props => (
 
         <Table>
-
+            {props.children}
 
         </Table>
     )

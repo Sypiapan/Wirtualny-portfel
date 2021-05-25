@@ -37,7 +37,7 @@ export default function Assets() {
             />
             <Paper className={classes.pageContent}>
 
-                {/*<Assetsform/>*/}
+                <Assetsform/>
 
                 <TblContainer>
                     <TableBody>
@@ -45,9 +45,11 @@ export default function Assets() {
                         {records.map(item=>(
 
                             <TableRow key={item.id}>
+
                                 <TableCell>{item.number}</TableCell>
                                 <TableCell>{item.price}</TableCell>
-                                <TableCell>{item.value}</TableCell>
+                                <TableCell>{item.currency}</TableCell>
+                                <TableCell>{item.number*item.price}</TableCell>
                             </TableRow>
                         ))}
 

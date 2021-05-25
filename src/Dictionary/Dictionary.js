@@ -7,6 +7,32 @@ export const getCurriencyCollection = () => ([
     {id: "GBP", title: "GBP"},
 ])
 
+
+export const getSharesCollection = () => ([
+
+    {id: "ASSECOPOL", title: "ASSECOPOL"},
+    {id: "ALLEGRO", title: "ALLEGRO"},
+    {id: "CCC", title: "CCC"},
+    {id: "CDPROJEKT", title: "CDPROJEKT"},
+    {id: "CYFRPLSAT", title: "CYFRPLSAT"},
+    {id: "KGHM", title: "KGHM"},
+    {id: "PKOBP", title: "PKOBP"},
+
+])
+
+
+
+
+export const getRealestateCollection = () => ([
+
+    {id: "mieszkanie", title: "mieszkanie"},
+    {id: "dom", title: "dom"},
+    {id: "działka", title: "działka"},
+    {id: "garaż", title: "garaż"},
+
+])
+
+
 const KEYS = {
 
     Investment: "Investment",

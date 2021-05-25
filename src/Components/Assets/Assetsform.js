@@ -32,6 +32,7 @@ const initialValues = {
     value: "",
     date: new Date(),
 
+
 };
 
 
@@ -42,8 +43,8 @@ export default function Assetsform() {
     const validate =()=>{
 
         let temp={}
-        temp.number = values.number? "":"Wpisane dane nie sa liczbą"
-        temp.price = values.price ?"":"Wpisane dane nie sa liczbą"
+        temp.number = !isNaN(values.number)? "":"Wpisane dane nie sa liczbą"
+        temp.price = !isNaN(values.price) ?"":"Wpisane dane nie sa liczbą"
 setErrors({
 
     ...temp
@@ -57,8 +58,12 @@ return Object.values(temp).every(x => x == "")
         handleInputChange,
         errors,
         setErrors,
+        list,
+        setList
 
-    } = UseForm(initialValues);
+
+
+    } = UseForm(initialValues, true, validate);
 
 const handleSubmit = e => {
     e.preventDefault()
@@ -97,13 +102,14 @@ Dictionary.insertInvestments(values)
                         value={values.asset}
                         onChange={handleInputChange}
                         items={assetsItems}
+
                     />
                     <Controls.Selects
                         name={"currency"}
                         label={"Waluty"}
                         value={values.currency}
                         onChange={handleInputChange}
-                        options={Dictionary.getCurriencyCollection()}
+                        options={list}
 
                     />
                     <Controls.DataPicker
